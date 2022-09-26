@@ -1,15 +1,15 @@
 def add(a,b):
     c = a+b
-    print("The answer is",c)
+    return c
 def sub(a,b):
     c = a-b
-    print("The answer is",c)
+    return c
 def div(a,b):
     c = a/b
-    print("The answer is",c)
+    return c
 def mul(a,b):
     c = a*b
-    print("The answer is",c)
+    return c
 
 d = 'y'
 
@@ -18,11 +18,47 @@ while d == 'y' or d == 'Y':
     b = int(input("Enter first number"))
     c = int(input("Enter second number"))
     if (a  == '+'):
-        add(b,c)
+        file1 = open("myfile.txt", "a")
+        file1.write(str(b))
+        file1.write(a)
+        file1.write(str(c))
+        file1.write('=')
+        e = (add(b,c))
+        print(b,a,c,"=",e)
+        file1.write(str(e))
+        file1.write(" \n")
+        file1.close()
     elif a == '-':
-        sub(b,c)
+        file1 = open("myfile.txt", "a")
+        file1.write(str(b))
+        file1.write(a)
+        file1.write(str(c))
+        file1.write('=')
+        e = (sub(b,c))
+        print(b,a,c,"=",e)
+        file1.write(str(e))
+        file1.write(" \n")
+        file1.close()
     elif a == '*':
-        mul(b,c)
+        file1 = open("myfile.txt", "a")
+        file1.write(str(b))
+        file1.write(a)
+        file1.write(str(c))
+        file1.write('=')
+        e = (mul(b,c))
+        print(b,a,c,"=",e)
+        file1.write(str(e))
+        file1.write(" \n")
+        file1.close()
     else:
-        div(b,c)
+        file1 = open("myfile.txt", "a")
+        file1.write(str(b))
+        file1.write(a)
+        file1.write(str(c))
+        file1.write('=')
+        e = (div(b,c))
+        print(b,a,c,"=",e)
+        file1.write(str(e))
+        file1.write(" \n")
+        file1.close()
     d = input("do you want to continue(Y/N)")
